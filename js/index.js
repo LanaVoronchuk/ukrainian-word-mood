@@ -23,20 +23,21 @@ function formSubmit(event) {
   const out = processText(textData);
 }
 
-
-
 function processText(text) {
   const words = splitUkrainian(text);
 
   // Word types
   const pronouns = new Pronouns();
   const pastConditionals = new PastConditionals();
-  
+  const triggers = new Triggers();
+
   for (const word of words) {
     pronouns.addWhenMatches(word);
     pastConditionals.addWhenMatches(word);
+    triggers.addWhenMatches(word);
   }
 
   console.log(pastConditionals);
   console.log(pronouns);
+  console.log(triggers);
 }

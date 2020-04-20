@@ -23,13 +23,6 @@ function splitUkrainian(text) {
 }
 
 
-
-
-function isPronoun(word) {
-  return PRONOUNS.has(word);
-}
-
-
 class WordType {
   constructor(name) {
     this.words = new Set();
@@ -47,42 +40,3 @@ class WordType {
     }
   }
 }
-
-
-const PRONOUNS = new Set([
-  'я',
-  'мене',
-  'мені',
-  'мною',
-  'себе',
-  'собі',
-  'собою',
-  'ти',
-  'тобі',
-  'тебе',
-  'тобою',
-  'ви',
-  'вам',
-  'вами',
-  'вас',
-]);
-class Pronouns extends WordType {
-  match(word) {
-    return PRONOUNS.has(word);
-  }
-}
-
-
-const CONDITIONALS = new Set(['якщо', 'якби', 'б', 'би']);
-const PAST_TENSE_SUFFIXES = ['ила', 'ала', 'ла', 'ив', 'ав', 'али', 'или', 'ли', 'ало', 'ло', 'ило'];
-
-class PastConditionals extends WordType {
-  match(word) {
-    if (CONDITIONALS.has(word)) {
-      return true;
-    }
-    return PAST_TENSE_SUFFIXES.some((suffix) => word.endsWith(suffix));
-  }
-}
-
-

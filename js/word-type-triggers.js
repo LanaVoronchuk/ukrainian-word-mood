@@ -68,8 +68,18 @@ const TRIGGER_PATTERNS = [
   /^відчутт.*$/u,
   /^.*люб.*$/u,
 ];
+
 class Triggers extends WordType {
   match(word) {
     return TRIGGER_PATTERNS.some((regex) => regex.test(word));
+  }
+
+  searchPhrases(text) {
+    for (const phrase in ABSLOUTES_PHRASES) {
+      const matches = text.match(phrase);
+      for (match in matches) {
+        console.log(match);
+      }
+    }
   }
 }

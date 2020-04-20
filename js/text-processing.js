@@ -2,8 +2,6 @@ const UKRAININAN_ALPHABET = new Set(['а', 'б', 'в', 'г', 'ґ', 'д', 'е', '
 const UKRAININAN_WORD_MODS = new Set(['-', "'", '’']);
 
 function splitUkrainian(text) {
-  text = text.toLowerCase();
-
   const words = [];
   let end = 0;
   let start;

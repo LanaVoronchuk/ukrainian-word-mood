@@ -9,5 +9,3 @@ class PastConditionals extends WordType {
     return PAST_TENSE_SUFFIXES.some((suffix) => word.endsWith(suffix));
   }
 }
-
-

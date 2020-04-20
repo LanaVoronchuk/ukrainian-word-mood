@@ -74,7 +74,8 @@ class Absolutes extends WordType {
       const matches = text.match(phrase);
       if (matches) {
         for (const match of matches) {
-          this.add(match)
+          // todo: handle counting each phrase of the word
+          this.add(match);
         }
       }
     }

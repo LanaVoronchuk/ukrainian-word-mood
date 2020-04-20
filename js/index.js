@@ -30,9 +30,13 @@ function processText(text) {
 
   // Word types
   const pronouns = new Pronouns();
+  const pastConditionals = new PastConditionals();
+  
   for (const word of words) {
     pronouns.addWhenMatches(word);
+    pastConditionals.addWhenMatches(word);
   }
 
+  console.log(pastConditionals);
   console.log(pronouns);
 }

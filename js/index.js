@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   // const input = `
   // Знаєте, що таке маленька дитина, коли у тебе діагноз «тривожно-депресивний розлад»?
   // Це твій персональний ад 24/7, коли тебе не відпускає ні на хвилину, ні на секунду. Ти відчуваєш таку відповідальність, жити з якою надзвичайно важко і гнітюче.
@@ -9,7 +9,7 @@ window.onload = function() {
 
   // processText(input)
   main();
-}
+};
 
 function main() {
   const form = document.getElementById('form');
@@ -25,18 +25,18 @@ function formSubmit(event) {
   // Print out
   const resultEl = document.getElementById('result');
 
-  let out = ''
+  let out = '';
   for (const key in result.wordTypes) {
     const wordType = result.wordTypes[key];
     out += `<b>${key}</b><br>`;
     out += `<b>count: ${wordType.count}</b><br>`;
-    out += `<b>percent: ${Math.floor(wordType.count / result.wordCount * 100)}%</b><br>`;
+    out += `<b>percent: ${Math.floor((wordType.count / result.wordCount) * 100)}%</b><br>`;
     out += '<ul>';
     for (const word of wordType.words.values()) {
       out += `<li>${word}</li>`;
     }
     out += '</ul>';
-    out += '</br></br>'
+    out += '</br></br>';
   }
   console.log(out);
 
@@ -70,5 +70,5 @@ function processText(text) {
       absolutes,
     },
     wordCount: words.length,
-  }
+  };
 }

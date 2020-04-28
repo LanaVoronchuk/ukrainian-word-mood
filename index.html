@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Назва проекту</title>
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -19,14 +21,22 @@
     <script src="./js/index.js"></script>
   </head>
   <body>
-    <h1>Назва проекту</h1>
-
-    <form action="/cgi-bin/hello_get.cgi" method="get" id="form">
-      <p>Введіть текст</p>
-      <textarea rows="5" cols="50" name="text" id="text"> </textarea>
-      <input type="submit" value="submit" id="submit" />
-    </form>
-    <p>Результати підрахунку</p>
-    <div id="result"></div>
+    <div id="mainspace">
+      <h1>Назва проекту</h1>
+    
+      <form action="/cgi-bin/hello_get.cgi" method="get" id="form">
+        <p>Введіть текст</p>
+        <textarea rows="5" cols="50" name="text" id="text"> </textarea>
+        <div>
+          <i class="hand point right outline icon">
+            <div id="button" ></div>
+          </i>
+            <input type="submit"  class="ui blue button" value="Отримати результати" id="submit" />
+          </div>
+        </div>
+      </form>
+      <p>Результати підрахунку</p>
+      <div id="result" class="ui grid"></div>
+  </div>
   </body>
 </html>

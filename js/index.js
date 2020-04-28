@@ -26,19 +26,21 @@ function formSubmit(event) {
   const resultEl = document.getElementById('result');
 
   let out = '';
+  // out += `<div>`;
   for (const key in result.wordTypes) {
     const wordType = result.wordTypes[key];
-    out += `<b>${key}</b><br>`;
-    out += `<b>count: ${wordType.count}</b><br>`;
-    out += `<b>percent: ${Math.floor((wordType.count / result.wordCount) * 100)}%</b><br>`;
-    out += '<ul>';
+    out += '<ul class="four wide column">';
+    out += `<div class="ui list">${key}</div>`;
+    out += `<div class="item">count: ${wordType.count}</div>`;
+    out += `<div class="item">percent: ${Math.floor((wordType.count / result.wordCount) * 100)}%<div>`;
+
     for (const word of wordType.words.values()) {
       out += `<li>${word}</li>`;
     }
     out += '</ul>';
     out += '</br></br>';
   }
-  console.log(out);
+  // out += `</div>`;
 
   resultEl.innerHTML = out;
 }

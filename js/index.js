@@ -30,18 +30,15 @@ function formSubmit(event) {
   for (const key in result.wordTypes) {
     const wordType = result.wordTypes[key];
     out += '<ul class="four wide column">';
-    out += `<div class="ui list">${key}</div>`;
-    out += `<div class="item">count: ${wordType.count}</div>`;
-    out += `<div class="item">percent: ${Math.floor((wordType.count / result.wordCount) * 100)}%<div>`;
-
+    out += `<div class="ui list"><h3><i class="bookmark outline icon"></i>${key}</h3></div>`;
+    out += `<div class="item">Кількість: ${wordType.count}</div>`;
+    out += `<div class="item">Частка: ${Math.floor((wordType.count / result.wordCount) * 100)}%<div>`;
     for (const word of wordType.words.values()) {
-      out += `<li>${word}</li>`;
+      out += `<li class="found_words">"${word}"</li>`;
     }
     out += '</ul>';
     out += '</br></br>';
   }
-  // out += `</div>`;
-
   resultEl.innerHTML = out;
 }
 

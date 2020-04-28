@@ -1,16 +1,55 @@
 form i.icon {
   font-size: 2em;
 }
-i {
+i,
+h1 {
   color: #2085d0;
 }
-#mainspace {
+#mainspace,
+#calcilation_of_results,
+#result {
   margin: 3% 8%;
 }
 
 h1 {
   text-align: center;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
+
 form {
   margin: 2% auto;
+}
+textarea {
+  width: 100%;
+  overflow: auto;
+  resize: none;
+  height: 16em;
+  margin-bottom: 50px;
+}
+
+textarea:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
+
+#submit {
+  margin-top: 2em;
+}
+
+#result {
+  width: 100%;
+  margin-top: 1%;
+}
+#calcilation_of_results {
+  margin-top: 5%;
+}
+
+div li {
+  font-size: 11px;
+  font-style: italic;
+  /* margin-right: 30px; */
+  margin-left: 22px;
+  margin-top: 3px;
 }

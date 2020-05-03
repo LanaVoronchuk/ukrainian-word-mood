@@ -47,6 +47,7 @@ const ABSOLUTES_PATTERNS = [
   /^.*анітрохи.*$/u,
   /^.*аніяк.*$/u,
   /^.*повн.*$/u,
+  /^.*кожн.*$/u,
 ];
 
 const ABSLOUTES_PHRASES = [
